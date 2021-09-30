@@ -8,19 +8,21 @@
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Title*" FontSize="Medium" />
+            <Label Text="Alle Felder müssen ausgefüllt sein!" HorizontalTextAlignment="Center" Margin="0,20,0,30" VerticalTextAlignment="Center" FontSize="22" />
+            <Label Text="Titel des Spieles:" FontSize="Medium" />
             <Entry Text="{Binding Title, Mode=TwoWay}" FontSize="Medium" MaxLength="25" />
 
-            <Label Text="Name*" FontSize="Medium" />
+            <Label Text="Name des Herstellers:" FontSize="Medium" />
             <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Medium"  MaxLength="25"/>
 
-            <Label Text="Year*" FontSize="Medium" />
-            <Entry Text="{Binding Year, Mode=TwoWay}" FontSize="Medium" Keyboard="Numeric" MaxLength="4"  />
+            <Label Text="Erscheinungsjahr ab 1980:" FontSize="Medium" />
+            <Entry Text="{Binding Year, Mode=OneWayToSource}" FontSize="Medium" Keyboard="Numeric" MaxLength="4"  />
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Abbrechen" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Speichern" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
             </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 

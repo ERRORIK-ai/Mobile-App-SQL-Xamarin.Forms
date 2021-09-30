@@ -11,7 +11,7 @@ namespace M335.ViewModels
     public class ItemDetailViewModel : BaseViewModel
     {
         private int itemId;
-        public int Id { get; set; }
+        public new int Id { get; set; }
 
         public int ItemId
         {

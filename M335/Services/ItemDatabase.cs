@@ -30,6 +30,7 @@ namespace M335.Services
             return Database.Table<Item>().OrderByDescending(itm => itm.Id).ToListAsync();
         }
 
+        //Wird nicht mehr gebraucht
         public Task<List<Item>> GetItemsNotDoneAsync()
         {
             // M335 mit einem Select
@@ -57,6 +58,7 @@ namespace M335.Services
             return null;
         }
 
+        //Wird nicht gebraucht
         public Task<int> DeleteItemAsync(Item item)
         {
             return Database.DeleteAsync(item);

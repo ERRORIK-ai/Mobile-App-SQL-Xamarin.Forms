@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace M335.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : ContentPage, INotifyPropertyChanged
     {        
         protected ItemDatabase _database;
         bool isBusy = false;
@@ -16,14 +16,14 @@ namespace M335.ViewModels
         private int? year;
         string title = string.Empty;
 
-        public bool IsBusy
+        public new bool IsBusy
         {
             get { return isBusy; }
             set { SetProperty(ref isBusy, value); }
         }
 
         
-        public string Title
+        public new string Title
         {
             get { return title; }
             set { SetProperty(ref title, value); }

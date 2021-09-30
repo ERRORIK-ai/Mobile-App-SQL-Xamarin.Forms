@@ -21,7 +21,7 @@ namespace M335.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Spiele-Datenbank";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
@@ -82,13 +82,14 @@ namespace M335.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        //Selektierte Items werden auf DetailPage angezeigt: Macht jetzt nichts mehr
+        void OnItemSelected(Item item)
         {
             if (item == null)
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+            // await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

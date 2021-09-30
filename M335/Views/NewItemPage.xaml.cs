@@ -17,5 +17,7 @@ namespace M335.Views
             InitializeComponent();
             BindingContext = new NewItemViewModel();
         }
+
+       
     }
 }

@@ -20,6 +20,7 @@ namespace M335.Views
         {
             InitializeComponent();
 
+
             BindingContext = _viewModel = new ItemsViewModel();
         }
 
@@ -28,5 +29,6 @@ namespace M335.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
     }
 }

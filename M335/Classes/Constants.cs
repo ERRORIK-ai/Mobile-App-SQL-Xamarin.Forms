@@ -7,14 +7,14 @@ namespace M335.Classes
 {
     public static class Constants
     {
-        public const string DatabaseFilename = "EriksSQLite3.db3";
+        public const string DatabaseFilename = "EriksSQLite.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
-            // open the database in read/write mode
+            //open the database in read/write mode
             SQLite.SQLiteOpenFlags.ReadWrite |
-            // create the database if it doesn't exist
+            //create the database if it doesn't exist
             SQLite.SQLiteOpenFlags.Create |
-            // enable multi-threaded database access
+            //enable multi-threaded database access
             SQLite.SQLiteOpenFlags.SharedCache;
 
         public static string DatabasePath
